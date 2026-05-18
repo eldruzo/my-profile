@@ -3,36 +3,28 @@ import FadeUp from './ui/FadeUp'
 
 export default function Education() {
   return (
-    <section id="education" className="py-24 bg-slate-50 dark:bg-slate-900">
+    <section id="education" className="py-24 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
       <div className="max-w-8xl mx-auto px-6">
         <FadeUp>
-          <p className="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400 mb-2.5">Education</p>
-          <h2 className="font-display text-[clamp(30px,4.5vw,42px)] font-bold text-slate-900 dark:text-slate-100 leading-tight mb-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-500 mb-3">Education</p>
+          <h2 className="font-display text-[clamp(28px,4vw,40px)] font-bold text-zinc-900 dark:text-zinc-50 leading-tight mb-14">
             Academic Background
           </h2>
         </FadeUp>
 
-        <div className="max-w-2xl">
+        <div className="max-w-xl">
           {education.map((ed, i) => (
             <FadeUp key={i} delay={i * 80}>
-              <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-md transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-xl bg-accent-50 dark:bg-accent-500/15 border border-accent-200 dark:border-accent-500/30 flex items-center justify-center text-lg shrink-0">
-                    🎓
-                  </div>
-                  <div>
-                    <h3 className="font-display text-[17px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                      {ed.degree}
-                    </h3>
-                    <p className="text-accent-600 dark:text-accent-400 text-sm font-medium mt-0.5">{ed.field}</p>
-                    <p className="text-slate-700 dark:text-slate-200 font-semibold mt-2">{ed.school}</p>
-                    <div className="flex items-center gap-3 mt-2 text-sm text-slate-400 dark:text-slate-500">
-                      <span>{ed.location}</span>
-                      <span>·</span>
-                      <span>{ed.period}</span>
-                    </div>
-                  </div>
-                </div>
+              <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7 bg-zinc-50 dark:bg-zinc-950">
+                <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3">
+                  {ed.period}
+                </p>
+                <h3 className="font-display text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
+                  {ed.degree}
+                </h3>
+                <p className="text-amber-600 dark:text-amber-500 text-sm font-medium mt-1">{ed.field}</p>
+                <p className="text-zinc-700 dark:text-zinc-300 font-medium mt-4">{ed.school}</p>
+                <p className="text-sm text-zinc-400 dark:text-zinc-600 mt-0.5">{ed.location}</p>
               </div>
             </FadeUp>
           ))}

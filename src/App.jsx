@@ -12,7 +12,7 @@ export default function App() {
   const [dark, setDark] = useState(() => {
     const stored = localStorage.getItem('theme')
     if (stored) return stored === 'dark'
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    return true
   })
 
   useEffect(() => {
@@ -21,7 +21,7 @@ export default function App() {
   }, [dark])
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+    <div className="min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50">
       <Navbar dark={dark} onToggleTheme={() => setDark(d => !d)} />
       <main>
         <Hero />

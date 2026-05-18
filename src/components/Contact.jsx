@@ -3,100 +3,57 @@ import FadeUp from './ui/FadeUp'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-slate-100/60 dark:bg-slate-800/40">
+    <section id="contact" className="py-24 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950">
       <div className="max-w-8xl mx-auto px-6">
         <FadeUp>
-          <p className="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400 mb-2.5">Contact</p>
-          <h2 className="font-display text-[clamp(30px,4.5vw,42px)] font-bold text-slate-900 dark:text-slate-100 leading-tight mb-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-500 mb-3">Contact</p>
+          <h2 className="font-display text-[clamp(28px,4vw,40px)] font-bold text-zinc-900 dark:text-zinc-50 leading-tight mb-4">
             Let's Work Together
           </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-[16px] max-w-xl mb-14 leading-relaxed">
-            I'm open to senior backend roles and interesting engineering challenges.
-            Reach out and I'll respond within a day.
+          <p className="text-zinc-500 dark:text-zinc-400 text-[16px] max-w-lg mb-14 leading-relaxed">
+            Open to senior backend roles and interesting engineering challenges. Reach out and I'll respond within a day.
           </p>
         </FadeUp>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
-          {/* Contact cards */}
+          {/* Contact list */}
           <FadeUp>
-            <div className="flex flex-col gap-4">
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden divide-y divide-zinc-200 dark:divide-zinc-800">
               {[
-                {
-                  icon: '📧',
-                  label: 'Email',
-                  value: meta.email,
-                  href: `mailto:${meta.email}`,
-                  cta: 'Send an email',
-                  external: false,
-                },
-                {
-                  icon: '🔗',
-                  label: 'LinkedIn',
-                  value: meta.linkedinLabel,
-                  href: meta.linkedin,
-                  cta: 'View profile',
-                  external: true,
-                },
-                {
-                  icon: '📞',
-                  label: 'Phone / WhatsApp',
-                  value: meta.phone,
-                  href: `https://wa.me/${meta.phone.replace(/\D/g, '')}`,
-                  cta: 'Message on WhatsApp',
-                  external: true,
-                },
-                {
-                  icon: '📍',
-                  label: 'Location',
-                  value: meta.locationDetail,
-                  href: null,
-                  cta: null,
-                  external: false,
-                },
-              ].map(card => (
-                <div
-                  key={card.label}
-                  className="flex items-center gap-4 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-5 py-4 hover:-translate-y-0.5 hover:shadow-md transition-all"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-accent-50 dark:bg-accent-500/15 border border-accent-200 dark:border-accent-500/30 flex items-center justify-center text-base shrink-0">
-                    {card.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-0.5">{card.label}</p>
-                    <p className="text-sm font-medium text-slate-800 dark:text-slate-200 truncate">{card.value}</p>
-                  </div>
-                  {card.href && card.cta && (
-                    <a
-                      href={card.href}
-                      {...(card.external ? { target: '_blank', rel: 'noopener' } : {})}
-                      className="shrink-0 text-xs font-semibold text-accent-600 dark:text-accent-400 hover:underline"
-                    >
-                      {card.cta} →
-                    </a>
-                  )}
+                { label: 'Email',             value: meta.email,        href: `mailto:${meta.email}`,                                  external: false },
+                { label: 'LinkedIn',          value: meta.linkedinLabel, href: meta.linkedin,                                           external: true  },
+                { label: 'Phone / WhatsApp',  value: meta.phone,        href: `https://wa.me/${meta.phone.replace(/\D/g, '')}`,         external: true  },
+                { label: 'Location',          value: meta.locationDetail, href: null,                                                   external: false },
+              ].map(row => (
+                <div key={row.label} className="flex items-center justify-between gap-4 px-5 py-4">
+                  <span className="text-xs text-zinc-400 dark:text-zinc-600 shrink-0 min-w-[120px]">{row.label}</span>
+                  {row.href
+                    ? <a href={row.href} {...(row.external ? { target: '_blank', rel: 'noopener' } : {})}
+                        className="text-sm text-amber-600 dark:text-amber-500 hover:underline text-right truncate">
+                        {row.value}
+                      </a>
+                    : <span className="text-sm text-zinc-700 dark:text-zinc-300 text-right">{row.value}</span>
+                  }
                 </div>
               ))}
             </div>
           </FadeUp>
 
-          {/* CTA panel */}
+          {/* CTA */}
           <FadeUp delay={100}>
-            <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-8 text-center">
-              <div className="w-14 h-14 rounded-2xl bg-accent-50 dark:bg-accent-500/15 border border-accent-200 dark:border-accent-500/30 flex items-center justify-center text-2xl mx-auto mb-5">
-                💼
-              </div>
-              <h3 className="font-display text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7">
+              <h3 className="font-display text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">
                 Open to Opportunities
               </h3>
-              <p className="text-slate-500 dark:text-slate-400 text-[15px] leading-relaxed mb-7">
-                Looking for senior backend roles or consulting work in Node.js, TypeScript, and distributed systems.
+              <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed mb-7">
+                Looking for senior backend roles in Node.js, TypeScript, and distributed systems.
                 Remote-friendly and open to Jakarta, Bandung, or Bogor.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href={`mailto:${meta.email}`}
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-accent-600 dark:bg-accent-500 text-white rounded-xl text-sm font-semibold hover:bg-accent-700 dark:hover:bg-accent-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent-600/30 transition-all"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-amber-500 text-zinc-950 rounded-lg text-sm font-semibold hover:bg-amber-400 transition-colors"
                 >
                   Send Email
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -104,7 +61,7 @@ export default function Contact() {
                 <a
                   href={meta.resume}
                   download
-                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 border-[1.5px] border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-sm font-semibold hover:border-accent-600 dark:hover:border-accent-400 hover:text-accent-600 dark:hover:text-accent-400 hover:-translate-y-0.5 transition-all"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm font-semibold hover:border-zinc-500 dark:hover:border-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
                   Download Resume

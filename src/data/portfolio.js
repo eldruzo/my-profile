@@ -10,8 +10,8 @@ export const meta = {
   locationDetail: 'Open to Jakarta, Bandung, Bogor, or Remote',
   linkedin: 'https://linkedin.com/in/eldruzo',
   linkedinLabel: 'linkedin.com/in/eldruzo',
-  photo: '/nabil-photo.png',
-  resume: '/Achmad_Nabil_Resume.docx',
+  photo: `${import.meta.env.BASE_URL}nabil-photo.png`,
+  resume: `${import.meta.env.BASE_URL}Achmad_Nabil_Resume.docx`,
   available: true,
   languages: ['Indonesian (Native)', 'English (Professional)'],
 }

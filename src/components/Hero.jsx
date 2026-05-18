@@ -39,8 +39,8 @@ export default function Hero() {
               className={`font-display text-[clamp(42px,6.5vw,68px)] font-extrabold leading-[1.08] text-slate-900 dark:text-slate-100 mb-2 ${fadeClass(0)}`}
               style={{ transitionDelay: '110ms' }}
             >
-              {meta.name.split(' ')[0]}<br />
-              <span className="text-accent-600 dark:text-accent-400">{meta.name.split(' ').slice(1).join(' ')}</span>
+              <span className="text-accent-600 dark:text-accent-400">{meta.callName}</span><br />
+              <span className="text-slate-400 dark:text-slate-500 text-[clamp(22px,3vw,34px)] font-semibold">{meta.name}</span>
             </h1>
 
             <p

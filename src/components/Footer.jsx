@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="py-8 bg-slate-900 dark:bg-slate-950 border-t border-slate-800">
       <div className="max-w-8xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="font-display text-base font-bold text-slate-100">
-          Achmad<span className="text-accent-400">.</span>
+          {meta.callName}<span className="text-accent-400">.</span>
         </span>
         <p className="text-sm text-slate-500">
           © {new Date().getFullYear()} {meta.name}. All rights reserved.

@@ -32,7 +32,7 @@ export default function Navbar({ dark, onToggleTheme }) {
       >
         <div className="max-w-8xl mx-auto px-6 h-full flex items-center justify-between">
           <a href="#home" className="font-display text-lg font-bold text-slate-900 dark:text-slate-100">
-            Achmad<span className="text-accent-600 dark:text-accent-400">.</span>
+            {meta.callName}<span className="text-accent-600 dark:text-accent-400">.</span>
           </a>
 
           <div className="hidden md:flex items-center gap-1">

@@ -1,0 +1,13 @@
+# Claude Code project memory and settings
+.claude/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/

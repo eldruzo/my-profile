@@ -3,33 +3,30 @@ import FadeUp from './ui/FadeUp'
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 bg-slate-50 dark:bg-slate-900">
+    <section id="skills" className="py-24 border-t border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
       <div className="max-w-8xl mx-auto px-6">
         <FadeUp>
-          <p className="text-xs font-bold uppercase tracking-widest text-accent-600 dark:text-accent-400 mb-2.5">Skills</p>
-          <h2 className="font-display text-[clamp(30px,4.5vw,42px)] font-bold text-slate-900 dark:text-slate-100 leading-tight mb-14">
+          <p className="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-500 mb-3">Skills</p>
+          <h2 className="font-display text-[clamp(28px,4vw,40px)] font-bold text-zinc-900 dark:text-zinc-50 leading-tight mb-14">
             What I Work With
           </h2>
         </FadeUp>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {skillGroups.map((group, i) => (
-            <FadeUp key={group.name} delay={i * 50}>
-              <div className="h-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 hover:-translate-y-1 hover:shadow-md transition-all">
-                <div className="flex items-center gap-2.5 mb-4">
-                  <span className="text-xl">{group.icon}</span>
-                  <h3 className="font-display text-[13px] font-semibold text-slate-700 dark:text-slate-200 uppercase tracking-wide">
-                    {group.name}
-                  </h3>
-                </div>
+        <FadeUp delay={60}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
+            {skillGroups.map((group) => (
+              <div key={group.name} className="bg-zinc-100 dark:bg-zinc-900 p-5">
+                <h3 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-4">
+                  {group.name}
+                </h3>
                 <div className="flex flex-wrap gap-1.5">
                   {group.skills.map(skill => (
                     <span
                       key={skill.label}
-                      className={`text-xs px-2.5 py-1 rounded-lg font-medium ${
+                      className={`text-xs px-2.5 py-1 rounded-md font-medium ${
                         skill.featured
-                          ? 'bg-accent-50 dark:bg-accent-500/15 text-accent-700 dark:text-accent-400 border border-accent-200 dark:border-accent-500/30'
-                          : 'bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-600'
+                          ? 'bg-amber-500/10 text-amber-700 dark:text-amber-400 ring-1 ring-amber-500/25'
+                          : 'bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'
                       }`}
                     >
                       {skill.label}
@@ -37,9 +34,9 @@ export default function Skills() {
                   ))}
                 </div>
               </div>
-            </FadeUp>
-          ))}
-        </div>
+            ))}
+          </div>
+        </FadeUp>
       </div>
     </section>
   )

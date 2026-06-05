@@ -1,0 +1,257 @@
+.lay-tiers {
+  background: var(--lay-bg);
+}
+
+.lay-tiers__heading {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 500;
+  margin-bottom: 0.625rem;
+}
+
+.lay-tiers__subhead {
+  color: var(--lay-ink-soft);
+  margin-bottom: 3rem;
+}
+
+.lay-tiers__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Card base */
+.lay-tier-card {
+  position: relative;
+  background: var(--lay-surface);
+  border: 1.5px solid var(--lay-line);
+  border-radius: var(--lay-radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  box-shadow: var(--lay-shadow);
+  transition: box-shadow 0.25s ease;
+  height: 100%;
+}
+
+/* Highlighted card — deep emerald */
+.lay-tier-card--highlight {
+  background: var(--lay-primary-2);
+  border-color: transparent;
+  box-shadow: 0 12px 48px -16px rgba(12, 58, 42, 0.55);
+}
+
+.lay-tier-card--highlight::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: calc(var(--lay-radius-lg) + 1px);
+  background: linear-gradient(135deg, rgba(224,146,47,0.35) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Badge */
+.lay-tier-card__badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--lay-accent);
+  color: #1B1714;
+  font-family: var(--lay-font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.875rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* Header */
+.lay-tier-card__num {
+  font-family: var(--lay-font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--lay-accent);
+  margin-bottom: 0.375rem;
+}
+
+.lay-tier-card__name {
+  font-family: var(--lay-font-display);
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--lay-ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.375rem;
+}
+
+.lay-tier-card--highlight .lay-tier-card__name {
+  color: var(--lay-surface);
+}
+
+.lay-tier-card__tagline {
+  font-size: 0.875rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.5;
+}
+
+.lay-tier-card--highlight .lay-tier-card__tagline {
+  color: rgba(255, 253, 248, 0.65);
+}
+
+/* Pricing */
+.lay-tier-card__pricing {
+  border-top: 1px solid var(--lay-line);
+  border-bottom: 1px solid var(--lay-line);
+  padding-block: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lay-tier-card--highlight .lay-tier-card__pricing {
+  border-color: rgba(255, 253, 248, 0.12);
+}
+
+.lay-tier-card__price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.lay-tier-card__price-label {
+  font-family: var(--lay-font-ui);
+  font-size: 0.8125rem;
+  color: var(--lay-ink-soft);
+}
+
+.lay-tier-card--highlight .lay-tier-card__price-label {
+  color: rgba(255, 253, 248, 0.55);
+}
+
+.lay-tier-card__price {
+  font-family: var(--lay-font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--lay-ink);
+}
+
+.lay-tier-card--highlight .lay-tier-card__price {
+  color: rgba(255, 253, 248, 0.85);
+}
+
+.lay-tier-card__price-row--monthly {
+  align-items: baseline;
+  gap: 0.25rem;
+  justify-content: flex-start;
+}
+
+.lay-tier-card__monthly {
+  font-family: var(--lay-font-display);
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: var(--lay-ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.lay-tier-card--highlight .lay-tier-card__monthly {
+  color: var(--lay-accent-2);
+}
+
+.lay-tier-card__per {
+  font-family: var(--lay-font-ui);
+  font-size: 0.875rem;
+  color: var(--lay-ink-soft);
+  margin-left: 0.25rem;
+}
+
+.lay-tier-card--highlight .lay-tier-card__per {
+  color: rgba(255, 253, 248, 0.55);
+}
+
+/* Features */
+.lay-tier-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.lay-tier-card__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-family: var(--lay-font-ui);
+  font-size: 0.875rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.45;
+}
+
+.lay-tier-card--highlight .lay-tier-card__feature {
+  color: rgba(255, 253, 248, 0.72);
+}
+
+.lay-tier-card__feature svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--lay-primary);
+}
+
+.lay-tier-card--highlight .lay-tier-card__feature svg {
+  color: var(--lay-accent-2);
+}
+
+/* Footer — pinned to card bottom */
+.lay-tier-card__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.lay-tier-card__ideal {
+  font-size: 0.8125rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.5;
+}
+
+.lay-tier-card--highlight .lay-tier-card__ideal {
+  color: rgba(255, 253, 248, 0.6);
+}
+
+.lay-tier-card__ideal strong {
+  color: var(--lay-ink);
+  font-weight: 600;
+}
+
+.lay-tier-card--highlight .lay-tier-card__ideal strong {
+  color: rgba(255, 253, 248, 0.85);
+}
+
+.lay-tier-card__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Highlighted ghost button override */
+.lay-tier-card--highlight .lay-btn--ghost {
+  color: var(--lay-surface);
+  border-color: rgba(255, 253, 248, 0.25);
+}
+
+.lay-tier-card--highlight .lay-btn--ghost:hover {
+  background: rgba(255, 253, 248, 0.08);
+}
+
+@media (max-width: 900px) {
+  .lay-tiers__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}

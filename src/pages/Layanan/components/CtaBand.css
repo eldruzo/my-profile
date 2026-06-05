@@ -1,0 +1,44 @@
+.lay-cta-band {
+  background: var(--lay-primary-2);
+  color: var(--lay-surface);
+  padding-block: clamp(4rem, 8vw, 6rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lay-cta-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(224,146,47,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.lay-cta-band__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  position: relative;
+}
+
+.lay-cta-band__heading {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  color: var(--lay-surface);
+  max-width: 16ch;
+}
+
+.lay-cta-band__subhead {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: rgba(255, 253, 248, 0.65);
+  max-width: 40ch;
+}
+
+.lay-cta-band__btn {
+  margin-top: 0.75rem;
+  font-size: 1.0625rem;
+  padding: 1rem 2rem;
+}

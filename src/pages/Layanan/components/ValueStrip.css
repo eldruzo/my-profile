@@ -1,0 +1,30 @@
+.lay-value-strip {
+  background: var(--lay-primary);
+  padding-block: 1.5rem;
+}
+
+.lay-value-strip__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lay-value-strip__icon {
+  font-size: 1.375rem;
+  color: var(--lay-accent-2);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.lay-value-strip__text {
+  font-family: var(--lay-font-ui);
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  font-weight: 500;
+  color: rgba(255, 253, 248, 0.88);
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .lay-value-strip__inner { align-items: flex-start; }
+}

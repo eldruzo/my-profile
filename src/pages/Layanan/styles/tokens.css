@@ -1,0 +1,23 @@
+:root {
+  --lay-bg:        #F6F1E7;
+  --lay-surface:   #FFFDF8;
+  --lay-ink:       #1B1714;
+  --lay-ink-soft:  #5A524A;
+  --lay-primary:   #12503A;
+  --lay-primary-2: #0C3A2A;
+  --lay-accent:    #E0922F;
+  --lay-accent-2:  #F3C77A;
+  --lay-line:      rgba(27, 23, 20, 0.12);
+  --lay-shadow:    18px 24px 60px -28px rgba(27, 23, 20, 0.35);
+
+  --lay-font-display: 'Fraunces', Georgia, serif;
+  --lay-font-ui:      'Hanken Grotesk', system-ui, sans-serif;
+
+  --lay-radius-sm:  6px;
+  --lay-radius-md:  12px;
+  --lay-radius-lg:  20px;
+
+  --lay-max-w:  1120px;
+  --lay-gutter: clamp(1.25rem, 5vw, 3rem);
+  --lay-header: 64px;
+}

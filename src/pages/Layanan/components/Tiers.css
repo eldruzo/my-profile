@@ -173,6 +173,86 @@
   color: rgba(255, 253, 248, 0.55);
 }
 
+/* Setup hero — big price + small label beneath */
+.lay-tier-card__setup-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lay-tier-card__setup-label {
+  font-family: var(--lay-font-ui);
+  font-size: 0.8125rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.lay-tier-card--highlight .lay-tier-card__setup-label {
+  color: rgba(255, 253, 248, 0.55);
+}
+
+/* Monthly secondary line — "lalu Rp75.000/bln" */
+.lay-tier-card__monthly-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.lay-tier-card__then {
+  font-family: var(--lay-font-ui);
+  font-size: 0.875rem;
+  color: var(--lay-ink-soft);
+}
+
+.lay-tier-card--highlight .lay-tier-card__then {
+  color: rgba(255, 253, 248, 0.55);
+}
+
+.lay-tier-card__monthly-amt {
+  font-family: var(--lay-font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--lay-ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.lay-tier-card--highlight .lay-tier-card__monthly-amt {
+  color: var(--lay-accent-2);
+}
+
+/* Recurring block — subtext notes */
+.lay-tier-card__recurring {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.lay-tier-card__recurring-note {
+  font-family: var(--lay-font-ui);
+  font-size: 0.6875rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.lay-tier-card--highlight .lay-tier-card__recurring-note {
+  color: rgba(255, 253, 248, 0.4);
+}
+
+.lay-tier-card__recurring-desc {
+  font-family: var(--lay-font-ui);
+  font-size: 0.6875rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.lay-tier-card--highlight .lay-tier-card__recurring-desc {
+  color: rgba(255, 253, 248, 0.4);
+}
+
 /* Features */
 .lay-tier-card__features {
   list-style: none;
@@ -246,6 +326,19 @@
 
 .lay-tier-card--highlight .lay-btn--ghost:hover {
   background: rgba(255, 253, 248, 0.08);
+}
+
+/* Fine-print below the tier grid */
+.lay-tiers__fineprint {
+  font-family: var(--lay-font-ui);
+  font-size: 0.75rem;
+  color: var(--lay-ink-soft);
+  line-height: 1.65;
+  text-align: center;
+  margin-top: 2rem;
+  padding-inline: 1rem;
+  max-width: 680px;
+  margin-inline: auto;
 }
 
 @media (max-width: 900px) {

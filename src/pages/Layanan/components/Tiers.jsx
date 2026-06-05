@@ -19,9 +19,9 @@ export default function Tiers() {
   const prefersReduced = useReducedMotion()
 
   const tierData = [
-    { name: t.tier1Name, tagline: t.tier1Tagline, idealFor: t.tier1IdealFor, features: t.tier1Features },
-    { name: t.tier2Name, tagline: t.tier2Tagline, idealFor: t.tier2IdealFor, features: t.tier2Features },
-    { name: t.tier3Name, tagline: t.tier3Tagline, idealFor: t.tier3IdealFor, features: t.tier3Features },
+    { name: t.tier1Name, tagline: t.tier1Tagline, idealFor: t.tier1IdealFor, features: t.tier1Features, recurringNote: t.tier1RecurringNote },
+    { name: t.tier2Name, tagline: t.tier2Tagline, idealFor: t.tier2IdealFor, features: t.tier2Features, recurringNote: t.tier2RecurringNote },
+    { name: t.tier3Name, tagline: t.tier3Tagline, idealFor: t.tier3IdealFor, features: t.tier3Features, recurringNote: t.tier3RecurringNote },
   ]
 
   const container = {
@@ -76,14 +76,19 @@ export default function Tiers() {
                 </header>
 
                 <div className="lay-tier-card__pricing">
-                  <div className="lay-tier-card__price-row">
-                    <span className="lay-tier-card__price-label">{t.tierSetup}</span>
-                    <span className="lay-tier-card__price lay-num">{formatRp(tier.setup)}</span>
+                  <div className="lay-tier-card__setup-hero">
+                    <span className="lay-tier-card__monthly lay-num">{formatRp(tier.setup)}</span>
+                    <p className="lay-tier-card__setup-label">{t.tierSetupLabel}</p>
                   </div>
-                  <div className="lay-tier-card__price-row lay-tier-card__price-row--monthly">
-                    <span className="lay-tier-card__monthly lay-num">{formatRp(tier.monthly)}</span>
-                    <span className="lay-tier-card__per">{t.tierMonthly}</span>
+                  <div className="lay-tier-card__recurring">
+                    <div className="lay-tier-card__monthly-line">
+                      <span className="lay-tier-card__then">{t.tierThen}</span>
+                      <span className="lay-tier-card__monthly-amt lay-num">{formatRp(tier.monthly)}</span>
+                      <span className="lay-tier-card__per">{t.tierMonthly}</span>
+                    </div>
+                    <p className="lay-tier-card__recurring-note">{data.recurringNote}</p>
                   </div>
+                  <p className="lay-tier-card__recurring-desc">{t.tierRecurringDesc}</p>
                 </div>
 
                 <ul className="lay-tier-card__features" aria-label="Fitur">
@@ -112,6 +117,7 @@ export default function Tiers() {
             )
           })}
         </motion.div>
+        <p className="lay-tiers__fineprint">{t.tiersFineprint}</p>
       </div>
     </section>
   )

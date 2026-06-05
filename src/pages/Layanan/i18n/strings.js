@@ -35,7 +35,15 @@ const strings = {
     tiersHeading: "Pilih paketmu",
     tiersSubhead: "Harga flat, nggak ada biaya kejutan.",
     tierSetup: "Setup",
+    tierSetupLabel: "setup · termasuk online 12 bulan",
+    tierThen: "lalu",
     tierMonthly: "/bln",
+    tierRecurringLabel: "Langganan Online",
+    tierRecurringDesc: "Domain + hosting + keamanan + support. Termasuk update konten minor maks. 2/bulan.",
+    tier1RecurringNote: "ditagih tahunan (Rp900.000/thn) · mulai tahun ke-2",
+    tier2RecurringNote: "ditagih tahunan (Rp3.000.000/thn) · mulai tahun ke-2",
+    tier3RecurringNote: "Rp8.400.000/thn · bisa bayar bulanan",
+    tiersFineprint: "Biaya setup sudah termasuk pembuatan website + domain & hosting untuk 12 bulan pertama. Langganan online berjalan mulai tahun ke-2 (minimal 12 bulan). Perubahan besar di luar update konten minor dikenakan biaya terpisah sesuai penawaran.",
     tierPopular: "Paling pas",
     tierCta: "Mulai dengan ini",
     tierIdealFor: "Cocok buat:",
@@ -124,7 +132,7 @@ const strings = {
     faqs: [
       {
         q: "Kalau saya berhenti berlangganan, gimana nasib website-nya?",
-        a: "Website diarsipkan. Domain tetap milik kamu karena didaftarin atas namamu. Kamu bisa ekspor konten kapan aja atau pindahin ke hosting lain. [⚠ Konfirmasi syarat lengkap sebelum go-live]",
+        a: "Website diarsipkan. Domain tetap milik kamu karena didaftarin atas namamu. Kamu bisa ekspor konten kapan aja atau pindahin ke hosting lain.",
       },
       {
         q: "Domain-nya milik saya?",
@@ -190,7 +198,15 @@ const strings = {
     tiersHeading: "Choose your plan",
     tiersSubhead: "Flat pricing, no surprise fees.",
     tierSetup: "Setup",
+    tierSetupLabel: "setup · includes 12 months online",
+    tierThen: "then",
     tierMonthly: "/mo",
+    tierRecurringLabel: "Online Subscription",
+    tierRecurringDesc: "Domain + hosting + security + support. Includes minor content updates up to 2×/month.",
+    tier1RecurringNote: "billed annually (Rp900,000/yr) · from year 2",
+    tier2RecurringNote: "billed annually (Rp3,000,000/yr) · from year 2",
+    tier3RecurringNote: "Rp8,400,000/yr · monthly billing available",
+    tiersFineprint: "Setup fee covers website creation + domain & hosting for the first 12 months. Online subscription starts from year 2 (minimum 12 months). Major changes beyond minor content updates are billed separately per quote.",
     tierPopular: "Most popular",
     tierCta: "Start with this",
     tierIdealFor: "Ideal for:",
@@ -279,7 +295,7 @@ const strings = {
     faqs: [
       {
         q: "What happens if I stop the subscription?",
-        a: "Your website will be archived. The domain stays yours (registered in your name). You can export content any time or move to another host. [⚠ Confirm exact terms before go-live]",
+        a: "Your website will be archived. The domain stays yours (registered in your name). You can export content any time or move to another host.",
       },
       {
         q: "Do I own the domain?",

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { meta, stats } from '../data/portfolio'
+import HeroBackground from './ui/HeroBackground'
 
 export default function Hero() {
   const [visible, setVisible] = useState(false)
@@ -9,8 +10,9 @@ export default function Hero() {
     `transition-all duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`
 
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 bg-zinc-50 dark:bg-zinc-950">
-      <div className="max-w-8xl mx-auto px-6 w-full py-20">
+    <section id="home" className="relative min-h-screen flex items-center pt-16 bg-zinc-50 dark:bg-zinc-950 overflow-hidden">
+      <HeroBackground />
+      <div className="relative z-10 max-w-8xl mx-auto px-6 w-full py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Text */}

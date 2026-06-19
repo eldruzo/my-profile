@@ -22,6 +22,20 @@ export default {
       maxWidth: {
         '8xl': '1280px',
       },
+      keyframes: {
+        drift: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(40px, -30px) scale(1.08)' },
+        },
+        'drift-reverse': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(-35px, 25px) scale(1.05)' },
+        },
+      },
+      animation: {
+        drift: 'drift 18s ease-in-out infinite',
+        'drift-reverse': 'drift-reverse 22s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

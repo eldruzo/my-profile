@@ -1,6 +1,30 @@
 import { useState, useEffect } from 'react'
 import { meta } from '../data/portfolio'
 
+function SunIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2" />
+      <path d="M12 20v2" />
+      <path d="m4.93 4.93 1.41 1.41" />
+      <path d="m17.66 17.66 1.41 1.41" />
+      <path d="M2 12h2" />
+      <path d="M20 12h2" />
+      <path d="m6.34 17.66-1.41 1.41" />
+      <path d="m19.07 4.93-1.41 1.41" />
+    </svg>
+  )
+}
+
+function MoonIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+    </svg>
+  )
+}
+
 const links = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
@@ -45,10 +69,10 @@ export default function Navbar({ dark, onToggleTheme }) {
           <div className="flex items-center gap-4">
             <button
               onClick={onToggleTheme}
-              className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors text-base leading-none"
+              className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
               aria-label="Toggle theme"
             >
-              {dark ? '○' : '●'}
+              {dark ? <MoonIcon className="w-[18px] h-[18px]" /> : <SunIcon className="w-[18px] h-[18px]" />}
             </button>
             <a href={meta.resume} download
               className="hidden md:block text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors">

@@ -233,6 +233,7 @@ export const projects = [
   {
     title: 'EDH ERP Platform',
     type: 'work',
+    featured: true,
     company: 'Zettabyte / EDH',
     role: 'Lead Backend Engineer',
     period: '2021 – 2026',

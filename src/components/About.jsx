@@ -25,7 +25,7 @@ export default function About() {
 
           {/* Facts */}
           <FadeUp delay={100}>
-            <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-300 dark:hover:border-zinc-600 transition-colors duration-300">
               <div className="px-5 py-3 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900">
                 <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600">Quick Facts</p>
               </div>

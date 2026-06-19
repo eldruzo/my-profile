@@ -15,7 +15,7 @@ export default function Skills() {
         <FadeUp delay={60}>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-zinc-200 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden">
             {skillGroups.map((group) => (
-              <div key={group.name} className="bg-zinc-100 dark:bg-zinc-900 p-5">
+              <div key={group.name} className="bg-zinc-100 dark:bg-zinc-900 p-5 hover:bg-zinc-50 dark:hover:bg-zinc-800/60 transition-colors duration-200">
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-4">
                   {group.name}
                 </h3>

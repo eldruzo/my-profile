@@ -49,29 +49,31 @@ export default function Experience() {
           {/* Detail panel */}
           <FadeUp delay={80}>
             <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7">
-              <div className="flex flex-wrap items-start justify-between gap-4 mb-6 pb-5 border-b border-zinc-200 dark:border-zinc-800">
-                <div>
-                  <h3 className="font-display text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
-                    {experiences[active].role}
-                  </h3>
-                  <p className="text-amber-600 dark:text-amber-500 text-sm font-medium mt-0.5">
-                    {experiences[active].company}
-                  </p>
+              <div key={active} className="animate-fade-in">
+                <div className="flex flex-wrap items-start justify-between gap-4 mb-6 pb-5 border-b border-zinc-200 dark:border-zinc-800">
+                  <div>
+                    <h3 className="font-display text-lg font-bold text-zinc-900 dark:text-zinc-50 leading-tight">
+                      {experiences[active].role}
+                    </h3>
+                    <p className="text-amber-600 dark:text-amber-500 text-sm font-medium mt-0.5">
+                      {experiences[active].company}
+                    </p>
+                  </div>
+                  <div className="text-right text-xs text-zinc-400 dark:text-zinc-600 shrink-0">
+                    <div>{experiences[active].period}</div>
+                    <div>{experiences[active].location}</div>
+                  </div>
                 </div>
-                <div className="text-right text-xs text-zinc-400 dark:text-zinc-600 shrink-0">
-                  <div>{experiences[active].period}</div>
-                  <div>{experiences[active].location}</div>
-                </div>
-              </div>
 
-              <ul className="flex flex-col gap-4">
-                {experiences[active].bullets.map((bullet, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                    <span className="mt-[9px] w-1 h-1 rounded-full bg-zinc-400 dark:bg-zinc-600 shrink-0" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
+                <ul className="flex flex-col gap-4">
+                  {experiences[active].bullets.map((bullet, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                      <span className="mt-[9px] w-1 h-1 rounded-full bg-zinc-400 dark:bg-zinc-600 shrink-0" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </FadeUp>
 

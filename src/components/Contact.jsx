@@ -42,7 +42,7 @@ export default function Contact() {
 
           {/* CTA */}
           <FadeUp delay={100}>
-            <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7">
+            <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7 hover:-translate-y-1 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-300">
               <h3 className="font-display text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">
                 Open to Opportunities
               </h3>

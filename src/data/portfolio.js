@@ -229,6 +229,40 @@ export const additionalExperiences = [
   },
 ]
 
+export const projects = [
+  {
+    title: 'EDH ERP Platform',
+    type: 'work',
+    company: 'Zettabyte / EDH',
+    role: 'Lead Backend Engineer',
+    period: '2021 – 2026',
+    description: 'Multi-tenant student billing and ERP platform serving 10+ European enterprise institutions. Led the core finance module and contributed across the platform\'s payment, reporting, and document-signing integrations.',
+    tags: ['Node.js', 'TypeScript', 'GraphQL', 'MongoDB', 'Stripe', 'Adyen'],
+    subProjects: ['Finance Module', 'Auto-Debit Workflows', 'Power BI Reporting', 'DocuSign Integration'],
+    highlights: ['60,000+ users in production', '~0 finance production incidents', '10+ enterprise tenants'],
+  },
+  {
+    title: 'Eldruzo Web',
+    type: 'personal',
+    company: 'Personal',
+    role: 'Founder · Full-Stack',
+    period: '2026 – present',
+    description: 'Subscription-based website service for Indonesian merchants. Bilingual (ID/EN) sales page with pricing calculator, service tiers, and FAQ — built as a side business alongside full-time engineering work.',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    highlights: ['Bilingual ID / EN', 'Subscription pricing tiers', 'Automated client onboarding'],
+    link: `${import.meta.env.BASE_URL}layanan/`,
+  },
+  {
+    title: 'ADMTC ERP Platform',
+    type: 'work',
+    company: 'Zettabyte / ADMTC',
+    role: 'Senior Backend Engineer',
+    period: '2025 – 2026',
+    description: 'Higher-education administration ERP, now in maintenance mode — resolving customer-reported tickets via YouTrack and keeping the platform stable for existing tenants.',
+    tags: ['Node.js', 'TypeScript', 'PostgreSQL', 'Sequelize', 'REST API'],
+  },
+]
+
 export const education = [
   {
     degree: 'Bachelor of Computer Science (S.Kom)',

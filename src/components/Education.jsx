@@ -15,7 +15,7 @@ export default function Education() {
         <div className="max-w-xl">
           {education.map((ed, i) => (
             <FadeUp key={i} delay={i * 80}>
-              <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7 bg-zinc-50 dark:bg-zinc-950">
+              <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl p-7 bg-zinc-50 dark:bg-zinc-950 hover:-translate-y-1 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-300">
                 <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400 dark:text-zinc-600 mb-3">
                   {ed.period}
                 </p>

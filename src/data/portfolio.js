@@ -135,6 +135,23 @@ export const skillGroups = [
 
 export const experiences = [
   {
+    role: 'Backend Engineer',
+    company: 'Onebrick (onebrick.io)',
+    period: 'Jul 2026 – Present',
+    location: 'Jakarta, Hybrid',
+    icon: '◉',
+    bullets: [
+      'Owns the technical development of Brick products, taking end-to-end responsibility for backend architecture decisions and delivery quality across the platform.',
+      'Participates in sprint planning and resource scheduling to align engineering delivery with business timelines and product roadmap.',
+      'Facilitates Agile ceremonies — stand-ups, sprint reviews, retrospectives, release planning, and stakeholder demos — keeping cross-functional delivery cadence on track.',
+      'Analyzes network traffic between applications and third-party endpoints to map integration behaviors and reverse-engineer API contracts for financial services.',
+      'Builds proofs of concept to replicate third-party application behavior, enabling controlled testing and integration outside production dependencies.',
+      'Authors SQL queries, stored procedures, and functions to support cross-divisional data retrieval and update needs across the organization.',
+      'Develops new features and bug fixes across applications and services within the Brick system, contributing to innovative financial solution products.',
+      'Monitors database health and performance, troubleshoots issues, and implements solutions to maintain platform stability and reliability.',
+    ],
+  },
+  {
     role: 'Senior Backend Engineer / Expert',
     company: 'Zettabyte Pte. Ltd.',
     period: 'Dec 2024 – Mar 2026',

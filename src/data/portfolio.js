@@ -46,7 +46,7 @@ export const experience = [
         title: 'Backend Engineer',
         period: 'Jul 2026 – Present',
         bullets: [
-          'Build features and fixes across Brick’s products and services, and own their technical delivery.',
+          'Build Go backend services, features and fixes across Brick’s products, and own their technical delivery.',
           'Analyse traffic between apps and third-party endpoints, then build proofs of concept that reproduce that behaviour elsewhere.',
           'Write SQL queries, stored procedures and functions for cross-division data work; watch database health and fix what it shows.',
           'Run stand-ups, reviews, retros, sprint and release planning, and stakeholder demos.',
@@ -129,7 +129,7 @@ export const experience = [
 ]
 
 export const skills = [
-  { group: 'Backend', items: 'Node.js, TypeScript, JavaScript, Express, GraphQL (Apollo), REST API design. Learning Go.' },
+  { group: 'Backend', items: 'Go, Node.js, TypeScript, JavaScript, Express, GraphQL (Apollo), REST API design.' },
   { group: 'Databases', items: 'MongoDB (schema design, aggregation pipelines, indexing). PostgreSQL and MySQL with Sequelize (schema design, joins, query optimisation).' },
   { group: 'Payments', items: 'Stripe and Adyen, webhook handling, idempotent event processing, auto-debit, disputes and chargebacks.' },
   { group: 'Reliability', items: 'Red Alert incident management, root cause analysis, microservices, modular monolith, event-driven and webhook-based design.' },
@@ -143,7 +143,7 @@ export const education = [
     title: 'S.Kom, Management Information Systems',
     where: 'STMIK Widya Pratama, Pekalongan',
     period: '2016 – 2020',
-    note: 'Best Graduate Student, Information Systems',
+    note: 'GPA 4.00 / 4.00 · Best Graduate Student, Information Systems',
   },
   {
     title: 'Dicoding Developer Conference',

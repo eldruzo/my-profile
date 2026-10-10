@@ -28,9 +28,9 @@ export default function Hero() {
 
         <div className="rise mt-10 grid gap-8 md:grid-cols-[minmax(0,34rem)_auto] md:items-end md:justify-between" style={{ animationDelay: '180ms' }}>
           <p className="text-[17px] sm:text-lg leading-[1.65] opacity-90">
-            Nearly five years building payment, billing and ERP backends in Node.js, TypeScript and GraphQL.
+            Nearly five years building payment, billing and ERP backends in Go, Node.js, TypeScript and GraphQL.
             I led the finance module behind 60,000+ student accounts at ZettaByte, and now work on
-            Southeast Asia’s financial API platform at Brick.
+            Southeast Asia’s financial API platform at Brick, writing Go.
           </p>
           <div className="flex flex-wrap gap-3">
             <a

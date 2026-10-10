@@ -2,18 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Ledger-paper palette: green-ruled paper, dark green ink, red ink for the few things that matter. */
+:root {
+  --paper: 0.975 0.008 150;
+  --paper-2: 0.948 0.013 150;
+  --rule: 0.86 0.025 155;
+  --ink: 0.24 0.03 165;
+  --ink-2: 0.40 0.025 165;
+  --ink-3: 0.49 0.02 165;
+  --ledger: 0.36 0.065 162;
+  --ledger-ink: 0.96 0.015 150;
+  --ledger-rule: 0.42 0.06 162;
+  --red: 0.53 0.19 28;
+  color-scheme: light;
+}
+
+.dark {
+  --paper: 0.19 0.016 165;
+  --paper-2: 0.215 0.018 165;
+  --rule: 0.32 0.022 160;
+  --ink: 0.94 0.012 150;
+  --ink-2: 0.80 0.014 155;
+  --ink-3: 0.68 0.014 155;
+  --ledger: 0.28 0.05 162;
+  --ledger-ink: 0.95 0.015 150;
+  --ledger-rule: 0.33 0.05 162;
+  --red: 0.72 0.15 32;
+  color-scheme: dark;
+}
+
 @layer base {
-  html { scroll-behavior: smooth; }
-  body { @apply font-sans antialiased; }
-}
-
-@layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 0.3s ease-out forwards;
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-variant-numeric: tabular-nums;
   }
+  ::selection { background: oklch(var(--red)); color: oklch(var(--paper)); }
+  :focus-visible { outline: 2px solid oklch(var(--red)); outline-offset: 3px; }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+@layer components {
+  .wide { font-stretch: 118%; }
+  .wider { font-stretch: 125%; }
+
+  /* Faint horizontal ruling, like ledger paper */
+  .ruled {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(2rem - 1px),
+      oklch(var(--ledger-rule)) calc(2rem - 1px),
+      oklch(var(--ledger-rule)) 2rem
+    );
+  }
+
+  /* Accountant's double underline, used under a total */
+  .total {
+    position: relative;
+    white-space: nowrap;
+  }
+  .total::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.15em;
+    height: 0.16em;
+    border-top: 0.045em solid oklch(var(--red));
+    border-bottom: 0.045em solid oklch(var(--red));
+    transform-origin: left;
+    animation: draw 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both;
+  }
+
+  .rise { animation: rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  .link {
+    text-decoration: underline;
+    text-decoration-color: oklch(var(--rule));
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-color 0.2s;
+  }
+  .link:hover { text-decoration-color: currentColor; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes draw {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise, .total::after { animation: none; }
 }
